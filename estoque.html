@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/estoque.css">
+    
+    <title>CarShop</title>
+</head>
+<body>
+    <header>
+        <nav class="d-flex align-items-center justify-content-md-around justify-content-between bg-black px-md-0 px-3">
+            <a class="logo d-flex justify-content-center align-items-center" href="/">
+              <img src="./assets/img/logo.png" alt="">
+            </a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list d-flex list-unstyled m-0 bg-black">
+                <li><a href="">Início</a></li>
+                <li><a href="/estoque.html">Estoque</a></li>
+                <li><a href="">Vender</a></li>
+                <li><a href="">Localização</a></li>
+                <li><a href="/anuncio.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="stock-page">
+          <div class="container-xxl p-0">
+            <div class="container-stock-page d-md-flex w-100">
+                <div class="filter-stock bg-black d-none d-md-block">
+                    <div class="filter-inputs text-light p-4">
+                        <h7 class="text-uppercase">Faixa de preco</h7><br>
+                        <div class="range-input d-flex justify-content-between pt-3">
+                            <label>De:<input class="range-input-text ms-1 p-1" type="text" id="User" name="Name" placeholder="0" /></label>
+                            <label>Até:<input class="range-input-text ms-1 p-1" type="text" id="User" name="Name" placeholder="250.000" /></label>
+                        </div>
+                    </div>
+                    <div class="filter-inputs text-light p-4">
+                        <h7 class="text-uppercase">Ano</h7><br>
+                        <div class="range-input d-flex justify-content-between pt-3">
+                            <label>De:<input class="range-input-text ms-1 p-1" type="text" id="User" name="Name" placeholder="0" /></label>
+                            <label>Até:<input class="range-input-text ms-1 p-1" type="text" id="User" name="Name" placeholder="250.000" /></label>
+                        </div>
+                    </div>
+
+                    <div class="filter-inputs text-light p-4">
+                        <h7 class="text-uppercase">Marca</h7><br>
+                        <select class="form-select my-3">
+                            <option>Marca</option>
+                        </select>
+                        
+                    </div>
+                    
+                    <div class="filter-inputs text-light p-4">
+                        <h7 class="text-uppercase">Tipo</h7><br>
+                        <select class="form-select my-3">
+                            <option>Tipo</option>
+                        </select>
+                        
+                    </div>
+                    
+                    <div class="filter-inputs text-light p-4">
+                        <h7 class="text-uppercase">Estado</h7><br>
+                        
+                        <div class="form-check mt-3">
+                            <input class="form-check-input" type="radio" name="novo" id="novo" value="option1">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Novo
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="seminovo" id="seminovo" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Seminovo
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="usado" id="usado" value="option3" checked>
+                            <label class="form-check-label" for="exampleRadios3">
+                                Usado
+                            </label>
+                        </div>
+                    </div>
+        
+                    <div class="actions-filter d-flex align-items-center justify-content-center p-4">
+                        <button class="btn-close-filter btn bg-danger text-light w-25 h-100 me-3"><i class="bi bi-x"></i></button>
+                        <button class="btn-filter btn bg-white w-100 h-100">Filtrar<i class="bi bi-funnel"></i></button>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="stock-vehicles d-flex flex-column align-items-center justify-content-center w-100 pt-5">
+                    
+                   
+                    
+                    <div class="top-stock bg-black d-flex justify-content-between align-items-center p-1 px-sm-4">
+                        <div class="order d-sm-flex align-items-center me-4">
+                            <p class="d-none d-lg-block p-0 m-0 text-light">Ordenar por:</p>
+                            <select class="order-select form-select ms-1 w-auto bg-light">
+                                <option>Popularidade</option>
+                                <option>Menor preço</option>
+                                <option>Maior preço</option>
+                                <option>Menor ano</option>
+                                <option>Maior ano</option>
+                              </select>
+                        </div>
+
+                        <div class="search">
+                            <div class="input-group rounded">
+                                <input type="search" class="search-input form-control rounded-1" placeholder="Procurar" aria-label="Search" aria-describedby="search-addon" />
+                                <span class="input-group-text border-0 bg-transparent" id="search-addon">
+                                    <i class="bi bi-search text-light"></i>
+                                </span>
+                              </div>
+                        </div>
+                            
+                    </div>
+
+                    <div class="open-filter d-flex justify-content-end d-md-none" style="width: 90%;">
+                        <button class="btn-open-text btn bg-black text-white p-2 mt-2 me-0 ms-1">Editar filtros</i></button>
+                        <button class="btn-open-filter btn bg-black text-white p-0 mt-2 me-0 ms-1"><i class="bi bi-filter"></i></button>
+                    </div>
+                  
+                    <div class="content-vehicles d-flex justify-content-center">
+                        <div class="list m-0 p-0 pt-4 gap-4">
+                            <!-- <div class="item p-0 m-0"><img src="/assets/img/1.jpeg" alt=""></div> -->
+                            <div class="item">
+                                <img src="/assets/img/1.png" alt="">
+                                <div class="car-description bg-white py-2 px-3">
+                                    <p class="fw-bold fs-5 mb-3 lh-1">Honda - HR-V EX 1.8 Flexone 16V 5p Aut. - 2020</p>
+                                    <div class="data-cars d-flex justify-content-between">
+                                        <div class="text-center">
+                                            <p class="p-0 m-0">38.566</p>
+                                            <img src = "/assets/img/km.svg" alt="km" style="width: 20px;">
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="p-0 m-0">Automático</p>
+                                            <img src = "/assets/img/cambio.svg" alt="cambio" style="width: 20px;">
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="p-0 m-0">Álc./Gasol.</p>
+                                            <img src = "/assets/img/combustivel.svg" alt="cambio" style="width: 20px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                        <div class="controls m-5">
+                            <div class="first">&#171;</div>
+                            <div class="prev"><</div>
+                            <div class="numbers">
+                                <div>1</div>
+                            </div>
+                            <div class="next">></div>
+                            <div class="last">&#187;</div>
+                        </div>  
+                </div>
+          </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-white bg-black" style="background-color: #f1f1f1;">
+      <div class="py-5"></div>
+      <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright:
+          <a class="text-dark" href="https://github.com/frederico-rufino">Frederico Rufino</a>
+      </div>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./assets/js/nav-bar.js"></script>
+    <script src="./assets/js/paginat.js"></script>
+</body>
+</html>
